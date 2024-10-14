@@ -5,33 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Nainika Singh Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- HEADER -->
 
-    <div class="header">
-        <div class="logo">Nainika Singh</div>
-        <nav>
-            <div id="mySidebar" class="sidebar">
-                <ul class="nav-links">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="container" onclick="toggleMenu(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+    <div class="navbar">
+        <!-- Hamburger menu for mobile -->
+        <div class="menu-toggle" onclick="toggleSidebar(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </div>
-      </div>
+        
+        <!-- Traditional Navigation bar for desktop -->
+        <ul class="nav-desktop">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
+        <div class="name">NAINIKA SINGH</div>
+    </div>
+
+    <!-- Sidebar for mobile and tablets -->
+    <div id="sidebar" class="sidebar">
+        <a href="#about" onclick="closeSidebar()">About Me</a>
+        <a href="#projects" onclick="closeSidebar()">Projects</a>
+        <a href="#skills" onclick="closeSidebar()">Skills</a>
+        <a href="#experience" onclick="closeSidebar()">Work Experience</a>
+        <a href="#contact" onclick="closeSidebar()">Contact</a>
+    </div>
+            
+        <section class="hero">
+            <div class="container">
+                <div class="text-section">
+                    <h1>Let's start something big together</h1>
+                    <div class="cta-buttons">
+                        <a href="https://www.linkedin.com/in/nainika-singh/" class="btn-linkedin">
+                            <i class="fa fa-linkedin" style="font-size:24px"></i>
+                        </a>
+                        <a href="mailto:nainika.india@gmail.com:" class="btn-email">
+                            <i class="fa fa-envelope" style="font-size:24px"></i>    
+                        </a>
+                        <a href="https://wa.me/+919599798400" class="btn-whatsapp">
+                            <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                        </a>
+                        <a href="https://github.com/nainikasingh" class="btn-github">
+                            <i class="fa fa-github" style="font-size:24px"></i>
+                        </a>
+                    </div>
+                    <a href="Nainika_Singh_Resume.pdf" class="btn-download">Download CV</a>
+                </div>
+        
+                <div class="image-section">
+                    <img src="image.jpeg" alt="Nainika Singh">
+                </div>
+            </div>
+        </section>
+    </header>   
 
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
@@ -46,15 +81,15 @@
         <div class="project-grid">
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3>AI Instrumental Music Generator</h3>
+                <h4>AI Instrumental Music Generator</h4>
                 <div class="project-1">
-                    <p>A Python-based music generator using TensorFlow and Magenta.</p>
+                    <p>A Python-based music generator using TensorFlow, Keras, Magenta and music21. </p>
                 </div>
                 <a href="https://github.com/nainikasingh/AI_Instrumental_Music_Generator" class="button">View Project</a>
             </div>
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3>Automated WhatsApp Personalized Messaging Using Database</h3>
+                <h4>Automated WhatsApp Personalized Messaging Using Database</h4>
                 <div class="project-1">
                     <p>Developed a system to send personalized messages on WhatsApp using Python and MySQL.</p>
                 </div>
@@ -62,7 +97,7 @@
             </div>
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3> Club Table Booking Website</h3>
+                <h4> Club Table Booking Website</h4>
                 <div class="project-1">
                     <p>A Python-based music generator using TensorFlow and Magenta.</p>
                 </div>
@@ -70,27 +105,24 @@
             </div>
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3>Automated Market Research Tool (IUS Digital Solutions)</h3>
+                <h4>Automated Market Research Tool (IUS Digital Solutions)</h4>
                 <div class="project-1">
                     <p>Automated the process of competitor analysis using BeautifulSoup, extracting real-time data from websites and generating reports in Excel.</p>
                 </div>
-                
             </div>
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3>Predictive Customer Churn Model (Outlook Publishing)</h3>
+                <h4>Predictive Customer Churn Model (Outlook Publishing)</h4>
                 <div class="project-1">
                     <p>Created a model using Python and SPSS to predict customer churn based on historical data. The model helped reduce churn by 15%.</p>
-                </div>
-                
+                </div> 
             </div>
             <div class="project-card">
                 <img src="images/project1.png" alt="Project Image">
-                <h3>Performance Dashboard (IUS Digital Solutions)</h3>
+                <h4>Performance Dashboard (IUS Digital Solutions)</h4>
                 <div class="project-1">
                     <p>Developed a real-time Power BI dashboard to track company-wide metrics, improving operational efficiency by 20%.</p>
                 </div>
-                
             </div>
             <!-- Repeat similar blocks for more projects -->
         </div>
@@ -186,7 +218,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <form action="mailto:nainika.singh@example.com" method="post" enctype="text/plain">
+        <form action="mailto:nainika.india@gmail.com" method="post" enctype="text/plain">
             <label for="name"> <b> Name </b></label>
             <input type="text" id="name" name="name" required>
 
@@ -199,6 +231,8 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#x2191;</button>
 
     <!-- FOOTER -->
     <footer>
