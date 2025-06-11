@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nainika Singh | AI Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 70px; }
+    .dark-mode {
+      background-color: #111827;
+      color: #f3f4f6;
+    }
+    .dark-mode header, .dark-mode footer {
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans transition-colors duration-300" id="body">
+  <header class="fixed top-0 w-full bg-white shadow z-50 dark:bg-gray-900">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-xl font-bold text-blue-600">Nainika Singh</h1>
+      <div class="hidden md:flex space-x-4" id="menu">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#summary" class="hover:text-blue-600">Summary</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <button onclick="toggleDarkMode()" class="ml-4 bg-gray-200 dark:bg-gray-700 text-sm px-3 py-1 rounded">🌓</button>
+      </div>
+      <button class="md:hidden" onclick="toggleMobileMenu()">☰</button>
+    </nav>
+    <div class="md:hidden hidden px-6 pb-4" id="mobileMenu">
+      <a href="#about" class="block py-1">About</a>
+      <a href="#summary" class="block py-1">Summary</a>
+      <a href="#skills" class="block py-1">Skills</a>
+      <a href="#contact" class="block py-1">Contact</a>
+      <button onclick="toggleDarkMode()" class="mt-2 bg-gray-200 dark:bg-gray-700 text-sm px-3 py-1 rounded">🌓</button>
+    </div>
+  </header>
+
+  <main class="mt-24">
+    <section id="about" class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900" data-aos="fade-up">
+      <div class="text-center max-w-3xl px-4">
+        <h2 class="text-5xl font-bold mb-6 text-blue-600 dark:text-blue-300">Hi 👋, I'm Nainika Singh</h2>
+        <p class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-300">AI Developer | Data Science | AI ML | Python Programmer | Community Contributor</p>
+        <p class="text-xl text-blue-600 mt-6 dark:text-blue-400"><span id="typed"></span></p>
+      </div>
+    </section>
+
+    <section id="summary" class="py-16 px-6 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100" data-aos="fade-up">
+      <h2 class="text-4xl font-semibold text-center mb-6">Summary</h2>
+      <p class="max-w-4xl mx-auto leading-relaxed text-lg">
+        AI Developer and Python Developer with strong proficiency in backend systems, automation, and data science. Delivered production-ready AI solutions like audit tools, cold-calling agents, and chatbots with VoIP and NLP. Demonstrated expertise in FastAPI, TensorFlow, AWS, and SPSS. Proven ability to develop scalable applications, automate workflows, and deliver actionable business insights.
+      </p>
+    </section>
+
+    <section id="skills" class="py-16 px-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" data-aos="fade-up">
+      <h2 class="text-4xl font-semibold text-center mb-6">Technical Skills</h2>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 text-lg">
+        <div><strong>Languages/Frameworks:</strong> Python, FastAPI, Django, Flask, TensorFlow, Keras, OpenCV</div>
+        <div><strong>AI/ML:</strong> NLP (spaCy, T5, Sentence Transformers), Generative AI, LLM Fine-tuning (Mistral AI)</div>
+        <div><strong>Backend & APIs:</strong> REST APIs, Web Scraping (BeautifulSoup, Selenium), VoIP (Asterisk, Twilio)</div>
+        <div><strong>Databases:</strong> MySQL, SQL Server, MongoDB, Google Sheets (gspread)</div>
+        <div><strong>Cloud & Tools:</strong> AWS (EC2, RDS, S3, SES), Power BI, SPSS, Docker, Git, Looker Studio</div>
+        <div><strong>Soft Skills:</strong> Analytical Thinking, Team Collaboration, Time Management, Rapid Learning</div>
+      </div>
+    </section>
+
+    <section class="text-center py-10 bg-white dark:bg-gray-900">
+      <a href="assets/Nainika_Resume.pdf" class="bg-green-500 text-white px-6 py-3 text-lg font-semibold rounded hover:bg-green-600 transition" download>📄 Download My Resume</a>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-4xl font-semibold text-center mb-6">Contact Me</h2>
+        <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded border dark:bg-gray-700">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded border dark:bg-gray-700">
+          <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-2 rounded border dark:bg-gray-700"></textarea>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-6 text-center bg-white dark:bg-gray-900 border-t dark:border-gray-700">
+      <p>© 2025 Nainika Singh. Built with ❤️ and Tailwind CSS</p>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init();
+    var typed = new Typed("#typed", {
+      strings: ["AI Developer", "Data Science", "AI ML", "Python Programmer", "Community Contributor"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
