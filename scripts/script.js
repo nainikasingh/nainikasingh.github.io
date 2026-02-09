@@ -1,17 +1,17 @@
-// Fade in animation
-const elements = document.querySelectorAll(".fade-in");
+// Reveal animation
+const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
     }
   });
 }, { threshold: 0.2 });
 
-elements.forEach(el => observer.observe(el));
+reveals.forEach(r => observer.observe(r));
 
-// Scroll progress bar
+// Scroll progress
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const height = document.body.scrollHeight - window.innerHeight;
@@ -19,3 +19,12 @@ window.addEventListener("scroll", () => {
   document.getElementById("progressBar").style.width = progress + "%";
 });
 
+// Theme toggle
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("light");
+});
+
+// Scroll to top when clicking NS
+document.getElementById("logo").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
