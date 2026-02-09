@@ -1,12 +1,26 @@
+// Fade-in on scroll
+const sections = document.querySelectorAll('.section-fade');
 
-AOS.init();
-var typed = new Typed("#typed", {
-  strings: ["AI Developer", "Data Science", "AI ML", "Python Programmer", "Community Contributor"],
-  typeSpeed: 50,
-  backSpeed: 30,
-  loop: true
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('section-visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+
+// Scroll progress indicator
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById("progressBar").style.width = progress + "%";
 });
 
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-}
+// Theme toggle
+document.getElementById("themeToggle").addEventListener("click", () => {
+    document.body.classList.toggle("bg-white");
+    document.body.classList.toggle("text-slate-900");
+});
