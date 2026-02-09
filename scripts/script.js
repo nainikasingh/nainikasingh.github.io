@@ -1,26 +1,21 @@
-// Fade-in on scroll
-const sections = document.querySelectorAll('.section-fade');
+// Fade in animation
+const elements = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('section-visible');
-        }
-    });
-}, { threshold: 0.15 });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
 
-sections.forEach(section => observer.observe(section));
+elements.forEach(el => observer.observe(el));
 
-// Scroll progress indicator
+// Scroll progress bar
 window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-    document.getElementById("progressBar").style.width = progress + "%";
+  const scrollTop = window.scrollY;
+  const height = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / height) * 100;
+  document.getElementById("progressBar").style.width = progress + "%";
 });
 
-// Theme toggle
-document.getElementById("themeToggle").addEventListener("click", () => {
-    document.body.classList.toggle("bg-white");
-    document.body.classList.toggle("text-slate-900");
-});

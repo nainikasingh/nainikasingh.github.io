@@ -1,181 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nainika Singh | AI & Backend Systems Engineer</title>
-<meta name="description" content="AI Engineer & Backend Systems Developer specializing in scalable APIs, automation, and cloud-native AI systems. M.Tech AI - IIT Patna.">
-<meta property="og:title" content="Nainika Singh | AI & Backend Systems Engineer">
-<meta property="og:description" content="I build intelligent backend systems that scale. AI • FastAPI • Cloud Architecture">
-<meta property="og:type" content="website">
+<meta name="description" content="AI Engineer specializing in scalable APIs, automation, and cloud-native architectures. M.Tech AI - IIT Patna.">
 
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-body { font-family: 'Inter', sans-serif; }
-.section-fade { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
-.section-visible { opacity: 1; transform: translateY(0); }
-.glass { backdrop-filter: blur(10px); background: rgba(15,23,42,0.6); }
-.progress-bar { position: fixed; top:0; left:0; height:3px; background:#3b82f6; z-index:50; }
-</style>
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="bg-slate-950 text-slate-200">
+<body>
 
 <div class="progress-bar" id="progressBar"></div>
 
-<header class="fixed w-full glass border-b border-slate-800 z-40">
-<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-<h1 class="font-semibold text-lg tracking-wide">NS</h1>
-<nav class="hidden md:flex space-x-8 text-sm text-slate-400">
-<a href="#about" class="hover:text-white">About</a>
-<a href="#experience" class="hover:text-white">Experience</a>
-<a href="#projects" class="hover:text-white">Projects</a>
-<a href="#skills" class="hover:text-white">Skills</a>
-<a href="#contact" class="hover:text-white">Contact</a>
-<button id="themeToggle">☀</button>
-</nav>
-</div>
+<header class="navbar">
+  <div class="container nav-wrapper">
+    <div class="logo">NS</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle">☀</button>
+    </nav>
+  </div>
 </header>
 
-<main class="pt-32">
+<main>
 
 <!-- HERO -->
-<section class="max-w-6xl mx-auto px-6 min-h-[80vh] flex flex-col justify-center">
-<h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
-I Build Intelligent Backend Systems That Scale.
-</h2>
+<section class="section hero container">
+  <h1 class="heading-xl">
+    I Build Intelligent Backend Systems That Scale.
+  </h1>
 
-<p class="mt-6 text-slate-400 text-lg max-w-2xl">
-AI Engineer specializing in scalable APIs, automation pipelines, and cloud-native architectures. 
-M.Tech Artificial Intelligence – IIT Patna.
-</p>
+  <p class="subtitle">
+    AI Engineer focused on scalable APIs, automation pipelines, and cloud-native architectures. 
+    M.Tech Artificial Intelligence – IIT Patna.
+  </p>
 
-<div class="mt-8 flex space-x-4">
-<a href="#projects" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-lg font-semibold transition">
-View Projects
-</a>
-<a href="assets/Nainika_Singh_SDE.pdf" download class="border border-slate-600 px-6 py-3 rounded-lg hover:border-blue-500 transition">
-Download Resume
-</a>
-</div>
+  <div class="cta-group">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="assets/Nainika_Singh_SDE.pdf" download class="btn-outline">Download Resume</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section-fade max-w-4xl mx-auto px-6 py-24">
-<h3 class="text-3xl font-bold mb-6">About</h3>
-<p class="text-slate-400 leading-relaxed">
-I design backend systems that combine intelligence with reliability. My work focuses on building 
-AI-integrated APIs, automation-driven workflows, and scalable database architectures. 
-From deploying FastAPI microservices to integrating NLP-driven automation pipelines, 
-I optimize systems for performance, clarity, and impact. 
-My approach is rooted in system design thinking — clean abstractions, measurable performance, 
-and production-ready engineering.
-</p>
+<section id="about" class="section container fade-in">
+  <h2 class="heading-lg">About</h2>
+  <p class="text-muted">
+    I design backend systems that combine intelligence with reliability. My work centers around 
+    AI-integrated APIs, automation-driven workflows, and scalable database architectures. 
+    From deploying FastAPI microservices to building NLP-powered automation systems, 
+    I optimize for performance, clarity, and production stability.
+  </p>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section-fade max-w-4xl mx-auto px-6 py-24">
-<h3 class="text-3xl font-bold mb-12">Experience</h3>
+<section id="experience" class="section container fade-in">
+  <h2 class="heading-lg">Experience</h2>
 
-<div class="border-l border-slate-700 pl-6 space-y-12">
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>SDE – Backend Developer</h3>
+      <span>IUS Digital Solutions | 2024 – Present</span>
+      <ul>
+        <li>Reduced manual reporting time by 50% through automation systems.</li>
+        <li>Built scalable Python backend modules for international platforms.</li>
+        <li>Optimized MySQL queries improving performance by 35%.</li>
+      </ul>
+    </div>
 
-<div>
-<h4 class="text-xl font-semibold">SDE – Backend Developer</h4>
-<p class="text-slate-400">IUS Digital Solutions | 2024 – Present</p>
-<ul class="mt-4 space-y-2 text-slate-400 list-disc ml-6">
-<li>Built automation systems reducing manual reporting time by 50%.</li>
-<li>Developed scalable Python backend modules for international platforms.</li>
-<li>Optimized MySQL queries improving data retrieval performance by 35%.</li>
-<li>Integrated structured data & analytics pipelines for SEO tracking.</li>
-</ul>
-</div>
-
-<div>
-<h4 class="text-xl font-semibold">Business Analyst</h4>
-<p class="text-slate-400">Outlook Publishing | 2024</p>
-<ul class="mt-4 space-y-2 text-slate-400 list-disc ml-6">
-<li>Designed MIS dashboards using Power BI & SPSS.</li>
-<li>Delivered statistical insights improving editorial decisions.</li>
-</ul>
-</div>
-
-</div>
+    <div class="timeline-item">
+      <h3>Business Analyst</h3>
+      <span>Outlook Publishing | 2024</span>
+      <ul>
+        <li>Designed MIS dashboards using Power BI & SPSS.</li>
+        <li>Delivered statistical insights for editorial strategy.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section-fade max-w-6xl mx-auto px-6 py-24">
-<h3 class="text-3xl font-bold mb-12">Selected Projects</h3>
+<section id="projects" class="section container fade-in">
+  <h2 class="heading-lg">Selected Projects</h2>
 
-<div class="grid md:grid-cols-3 gap-8">
+  <div class="card-grid">
+    <div class="card">
+      <h3>AI Resume Intelligence Tool</h3>
+      <p>ATS-aware AI engine extracting structured insights and optimization recommendations.</p>
+      <div class="tech">FastAPI • TensorFlow • spaCy</div>
+    </div>
 
-<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-blue-500 transition">
-<h4 class="text-xl font-semibold">AI Resume Intelligence Tool</h4>
-<p class="mt-4 text-slate-400 text-sm">
-ATS-aware AI engine extracting structured resume insights and generating 
-optimization recommendations.
-</p>
-<p class="mt-4 text-xs text-blue-400">FastAPI • TensorFlow • spaCy • PDFKit</p>
-</div>
+    <div class="card">
+      <h3>AI Cold Calling System</h3>
+      <p>Bilingual VoIP automation with sentiment analysis. Reduced review time by 50%.</p>
+      <div class="tech">FastAPI • Twilio • Mistral • AWS</div>
+    </div>
 
-<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-blue-500 transition">
-<h4 class="text-xl font-semibold">AI Cold Calling System</h4>
-<p class="mt-4 text-slate-400 text-sm">
-Automated bilingual VoIP agent with sentiment analysis and lead classification.
-Reduced review time by 50%.
-</p>
-<p class="mt-4 text-xs text-blue-400">FastAPI • Twilio • Mistral • AWS</p>
-</div>
-
-<div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-blue-500 transition">
-<h4 class="text-xl font-semibold">Inventory AI Assistant</h4>
-<p class="mt-4 text-slate-400 text-sm">
-Conversational backend system with organization-based access control and 
-vector search for real-time inventory insights.
-</p>
-<p class="mt-4 text-xs text-blue-400">MongoDB • FastAPI • AWS EC2</p>
-</div>
-
-</div>
+    <div class="card">
+      <h3>Inventory AI Assistant</h3>
+      <p>Conversational backend with org-based access control and vector search.</p>
+      <div class="tech">MongoDB • FastAPI • AWS EC2</div>
+    </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section-fade max-w-6xl mx-auto px-6 py-24">
-<h3 class="text-3xl font-bold mb-12">Technical Expertise</h3>
+<section id="skills" class="section container fade-in">
+  <h2 class="heading-lg">Technical Expertise</h2>
 
-<div class="grid md:grid-cols-3 gap-8 text-sm text-slate-400">
-<div>
-<h4 class="font-semibold text-white mb-3">Backend & APIs</h4>
-<p>Python • FastAPI • Django • REST • Microservices</p>
-</div>
+  <div class="skills-grid">
+    <div>
+      <h4>Backend & APIs</h4>
+      <p>Python • FastAPI • Django • REST • Microservices</p>
+    </div>
 
-<div>
-<h4 class="font-semibold text-white mb-3">AI & ML</h4>
-<p>Transformers • NLP • TensorFlow • LLM Fine-Tuning</p>
-</div>
+    <div>
+      <h4>AI & ML</h4>
+      <p>Transformers • NLP • TensorFlow • LLM Fine-Tuning</p>
+    </div>
 
-<div>
-<h4 class="font-semibold text-white mb-3">Cloud & DevOps</h4>
-<p>AWS EC2 • Lambda • Docker • CI/CD • GitHub Actions</p>
-</div>
-</div>
+    <div>
+      <h4>Cloud & DevOps</h4>
+      <p>AWS • Docker • CI/CD • GitHub Actions</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section-fade max-w-4xl mx-auto px-6 py-24 text-center">
-<h3 class="text-3xl font-bold mb-6">Let’s Build Something Intelligent.</h3>
-<p class="text-slate-400 mb-6">
-nainika.india@gmail.com
-</p>
+<section id="contact" class="section container fade-in contact">
+  <h2 class="heading-lg">Let’s Build Something Intelligent.</h2>
+  <p>nainika.india@gmail.com</p>
 </section>
 
-<footer class="text-center text-slate-500 py-8 border-t border-slate-800">
-© 2026 Nainika Singh
-</footer>
-
 </main>
+
+<footer>
+  © 2026 Nainika Singh
+</footer>
 
 <script src="scripts/script.js"></script>
 </body>
